@@ -12,7 +12,7 @@ module BlacklightUnapi::ControllerExtension
     @format = params[:format]
 
     if params[:id]
-      @response, @document = get_solr_response_for_doc_id params[:id]
+      @response, @document = fetch params[:id]
       @export_formats = @document.export_formats
     end
 	 	
